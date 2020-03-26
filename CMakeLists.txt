@@ -554,6 +554,7 @@ endif()
 
 if(MSVC)
   option(LLVM_BUILD_LLVM_C_DYLIB "Build LLVM-C.dll (Windows only)" ON)
+  add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING=1)
   # Set this variable to OFF here so it can't be set with a command-line
   # argument.
   set (LLVM_LINK_LLVM_DYLIB OFF)
